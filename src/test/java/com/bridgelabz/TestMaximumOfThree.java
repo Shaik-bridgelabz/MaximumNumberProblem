@@ -36,4 +36,12 @@ public class TestMaximumOfThree {
         Float checkMaxFloat = maximumOfThree.findMaxFloat(20.2f,10.0f,12.65f);
         Assert.assertEquals(java.util.Optional.of((Float)20.2f), java.util.Optional.of(checkMaxFloat));
     }
+
+    @Test
+    public void givenThreeInput_maxFloatAtSecondPosition_shouldReturnMaximum()
+    {
+        MaximumOfThree maximumOfThree = new MaximumOfThree();
+        Float checkMaxFloat = maximumOfThree.findMaxFloat(20.2f,100.0f,26.65f);
+        Assert.assertEquals(java.util.Optional.of((Float)100.0f), java.util.Optional.of(checkMaxFloat));
+    }
 }
