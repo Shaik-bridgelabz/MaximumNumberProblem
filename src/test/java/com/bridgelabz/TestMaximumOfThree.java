@@ -68,4 +68,12 @@ public class TestMaximumOfThree {
         String checkString = maximumOfThree.findMaxString("Peach","Apples","Guava");
         Assert.assertEquals("Apples",checkString);
     }
+
+    @Test
+    public void givenThreeInput_maxStringAtThirdPosition_shouldReturnMaximumString()
+    {
+        MaximumOfThree maximumOfThree = new MaximumOfThree();
+        String checkString = maximumOfThree.findMaxString("Peach","Guava","Apples");
+        Assert.assertEquals("Apples",checkString);
+    }
 }
