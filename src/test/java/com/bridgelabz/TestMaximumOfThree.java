@@ -52,4 +52,12 @@ public class TestMaximumOfThree {
         Float checkMaxFloat = maximumOfThree.findMaxFloat(20.2f,100.0f,226.65f);
         Assert.assertEquals(java.util.Optional.of((Float)226.65f), java.util.Optional.of(checkMaxFloat));
     }
+
+    @Test
+    public void givenThreeInput_maxStringAtFirstPosition_shouldReturnMaximumString()
+    {
+        MaximumOfThree maximumOfThree = new MaximumOfThree();
+        String checkString = maximumOfThree.findMaxString("Apples","Peach","Guava");
+        Assert.assertEquals("Apples",checkString);
+    }
 }
