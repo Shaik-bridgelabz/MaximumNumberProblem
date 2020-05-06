@@ -8,14 +8,19 @@ public class MaximumOfThree<E extends Comparable<E>> {
     public MaximumOfThree() {
 
     }
-    
+
     public MaximumOfThree(E firstInput, E secondInput, E thirdInput) {
         this.firstInput=firstInput;
         this.secondInput=secondInput;
         this.thirdInput=thirdInput;
     }
 
-    public <E extends Comparable> E findMaxOfThree(E firstInput, E secondInput, E thirdInput) {
+    public E findMaxOfThree() {
+        E maximumResult = findMaxOfThree(firstInput,secondInput,thirdInput);
+        return maximumResult;
+    }
+
+    public static <E extends Comparable> E findMaxOfThree(E firstInput, E secondInput, E thirdInput) {
 
         E maximum=firstInput;
         if (secondInput.compareTo(maximum) > 0 )
